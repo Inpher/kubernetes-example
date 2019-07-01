@@ -1,5 +1,15 @@
 # Example website
 
-Docker image is pushed as `gcr.io/devops-interview-242708/nginx`
+A basic html server, packaged with Docker. Static html files are placed in `static/`.
 
-Deployed with `kubectl apply -f deploy.yaml`
+## Build
+
+`docker build -t gcr.io/devops-interview-242708/nginx .`
+
+`docker run --rm -p 8080:80 gcr.io/devops-interview-242708/nginx`
+
+## Deploy
+
+`docker push gcr.io/devops-interview-242708/nginx`
+
+`kubectl apply -f deploy.yaml`
